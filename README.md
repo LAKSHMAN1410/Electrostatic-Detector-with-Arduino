@@ -18,14 +18,23 @@ This project aims to provide a low-cost, real-time detection system using Arduin
 Component	Quantity	Description
 
 Arduino Uno	1	Microcontroller board
+
 Copper Wire (antenna)	1	Acts as electrostatic probe
+
 Resistors	2–3	Used in RC detection circuit
+
 LCD (I2C, 16x2)	1	Displays sensor values
+
 LED	1	Visual alert
+
 Buzzer	1	Audible alert
+
 1N4007 Diode	1	Protection from spikes
+
 Rechargeable Battery	1	Power supply
+
 Jumper Wires	As needed	Connections
+
 PCB/ Breadboard	1	Circuit assembly
 
 
