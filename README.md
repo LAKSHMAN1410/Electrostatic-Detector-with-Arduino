@@ -111,7 +111,7 @@ DIY and hobbyist electronics projects
 ---
 ✅ Advantages & ❌ Limitations
 
-Advantages
+Advantages:
 
 Non-contact detection
 
@@ -122,7 +122,7 @@ Low-cost, simple design
 Beginner-friendly project
 
 
-Limitations
+Limitations:
 
 Limited sensitivity range
 
