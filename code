@@ -1,0 +1,63 @@
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+
+// LCD configuration
+#define LCD_ADDR 0x27  // Default I2C address for most LCD modules (can be 0x3F for others)
+#define LCD_COLS 16    // Number of columns on the LCD
+#define LCD_ROWS 2     // Number of rows on the LCD
+
+LiquidCrystal_I2C lcd(LCD_ADDR, LCD_COLS, LCD_ROWS);
+
+// Pin definitions
+#define LED_PIN 7      // LED connected to Pin 7
+#define INPUT_PIN A0   // Analog input at A0
+
+void setup() {
+  // Initialize serial communication
+  Serial.begin(9600);
+
+  // Initialize LCD
+  lcd.init();         // Use lcd.init() instead of lcd.begin()
+  lcd.backlight();    // Turn on the LCD backlight
+
+  // Display initialization message
+  lcd.setCursor(0, 0);  // Set cursor to top-left corner
+  lcd.print("ELECTROSTATIC DETECTOR");
+  delay(2000);          // Show the message for 2 seconds
+
+  // Clear LCD for new data
+  lcd.clear();
+
+  // Initialize pin modes
+  pinMode(LED_PIN, OUTPUT);
+  pinMode(INPUT_PIN, INPUT);
+}
+
+void loop() {
+  // Read analog input value from A0
+  int inputValue = analogRead(INPUT_PIN);
+
+  // Print input value to Serial Monitor (optional for debugging)
+  Serial.print("Analog Input: ");
+  Serial.println(inputValue);
+
+  // Display the input value on the LCD
+  lcd.clear();                  // Clear the LCD for new data
+  lcd.setCursor(0, 0);          // Set cursor to the top-left corner
+  lcd.print("Input Value: ");
+  lcd.print(inputValue);
+
+  // LED control based on input value
+  if (inputValue < 950) {
+    digitalWrite(LED_PIN, LOW);  // Turn LED OFF
+    lcd.setCursor(0, 1);         // Set cursor to the second line
+    lcd.print("OFF");
+  } else {
+    digitalWrite(LED_PIN, HIGH); // Turn LED ON
+    lcd.setCursor(0, 1);         // Set cursor to the second line
+    lcd.print("DETECTING");
+  }
+
+  // Small delay for stability
+  delay(500);
+}
