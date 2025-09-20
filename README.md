@@ -149,3 +149,6 @@ Display field strength in V/m instead of raw values
 Use multiple sensors for area-wide detection
 
 Implement data logging for experiments
+
+#Detector 
+#physics
