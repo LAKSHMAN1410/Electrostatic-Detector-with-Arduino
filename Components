@@ -1,0 +1,49 @@
+  Components :
+
+1. Arduino  (Uno)
+2. Conductive antenna  (copper wire 1dbi)
+3. Resistor
+4. Pcb board
+5. Lcd display
+6. Rechargeable battery
+7. Diode (IN 40007)
+8. Connecting wires (jumpers)
+9. Switch 
+10. LED and  Buzzer  (for output)
+
+
+
+These are the hardware components used in electro static detector with arduino uno.
+IN these 10 components each one has separate configuration and each can be doing different operations
+
+
+
+
+
+1.Arduino (uno):
+
+
+ To build an electrostatic detector with Arduino Uno, use a capacitor and resistor to create an RC circuit that detects capacitance changes from nearby electrostatic fields. The Arduino reads these changes via a digital pin and can trigger an LED or buzzer for feedback.
+
+ 2.Antenna (Copper Wire)  :
+
+ Copper wire is often used in electrostatic detectors as electrostatic probes or sensor leads. When a charged object is nearby, the copper wire can pick up changes in the electrostatic field, causing a shift in capacitance.
+
+ 3. Resisters :
+
+ Resistors are used in electrostatic detectors to create RC circuits, which help measure changes in capacitance caused by nearby electric fields. These circuits allow the Arduino to detect the presence of electrostatic charges by monitoring charging times. Resistors can also be used in voltage dividers to scale down the signal for the Arduino to read.
+
+4, LCD display :
+
+
+An LCD display in an electrostatic detector shows real-time data, such as the detected capacitance or the presence of an electrostatic field. It can display information like "Charge Detected" or numerical values related to capacitance changes. The Arduino processes the sensor readings and sends the data to the LCD for easy viewing. This helps users monitor electrostatic activity without needing a computer.
+
+5. Diode IN 40007: 
+
+A 1N4007 diode in an electrostatic detector can be used for protection and signal conditioning. It protects the circuit from voltage spikes or reverse polarity that could damage sensitive components. It can also be used to rectify AC signals or smooth out irregular voltages, ensuring stable readings. The diode helps the Arduino safely process the signal from the electrostatic sensor.
+
+6. LED and BUZZER : 
+
+An LED and buzzer in an electrostatic detector act as indicators for detecting electrostatic charges. The LED can light up when a charge is detected, providing a visual alert. The buzzer can sound when electrostatic fields are present, giving an audible warning. Both components make it easy to know when electrostatic activity is happening without needing to look at a screen.
+
+7. Power Supply : 
